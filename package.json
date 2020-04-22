@@ -1,6 +1,6 @@
 {
   "name": "fileparts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tiny package for a file object which has properties like `extname`, `dirname`, and so on which can be modified independently of a path as a whole.",
   "main": "index.js",
   "type": "module",
