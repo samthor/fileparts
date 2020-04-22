@@ -32,6 +32,26 @@ suite('FileParts', () => {
     assert.equal(p.name, 'foofoo.foo');
     assert.equal(p.basename, 'foofoo.foo.bar');
     assert.equal(p.extname, '.bar');
+
+    assert.equal(p.stem, 'foofoo.foo', '.stem should be the same as .name');
+  });
+
+  test('normalize', () => {
+    const p = new FileParts('/hello/../there')
+    assert.equal(p.dirname, '/hello/..');
+
+    p.normalize();
+    assert.equal(p.path, '/there');
+  });
+
+  test('helpers', () => {
+    const p = new FileParts('/hello/there')
+
+    const j = JSON.stringify(p);
+    assert.equal(j, '"/hello/there"');
+
+    const s = String(p);
+    assert.equal(s, '/hello/there');
   });
 
   test('dir', () => {

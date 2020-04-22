@@ -21,6 +21,17 @@ export default class FileParts {
     return this.#path;
   }
 
+  toJSON() {
+    return this.#path;
+  }
+
+  /**
+   * Normalizes the contained path, as per Node.
+   */
+  normalize() {
+    this.#path = path.normalize(this.#path);
+  }
+
   /**
    * @return {string} returns the whole path
    */

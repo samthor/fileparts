@@ -1,4 +1,8 @@
 {
+  "name": "fileparts",
+  "version": "1.0.0",
+  "description": "Tiny package for a file object which has properties like `extname`, `dirname`, and so on which can be modified independently of a path as a whole.",
+  "main": "index.js",
   "type": "module",
   "devDependencies": {
     "chai": "^4.2.0",
@@ -6,5 +10,9 @@
   },
   "scripts": {
     "test": "mocha"
-  }
+  },
+  "module": "index.js",
+  "repository": "git@github.com:samthor/fileparts.git",
+  "author": "Sam Thorogood <sam.thorogood@gmail.com>",
+  "license": "Apache-2.0"
 }
